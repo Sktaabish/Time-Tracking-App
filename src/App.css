@@ -1,0 +1,553 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f5f7;
+  margin: 0;
+  padding: 0;
+}
+
+.timesheet-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0747a6;
+  padding: 10px 20px;
+  color: white;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.nav-left .logo {
+  font-weight: bold;
+  font-size: 18px;
+  margin-right: 20px;
+}
+
+.nav-left ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-left ul li {
+  cursor: pointer;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.create-btn {
+  background-color: #0052cc;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.search-bar {
+  padding: 6px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.user-avatar {
+  background-color: #0052cc;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+/* Timesheet Layout */
+.timesheet-container {
+  display: flex;
+  height: 100%;
+}
+
+.sidebar {
+  width: 60px;
+  background-color: white;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.timesheet-content {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+.timesheet-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-info img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.date-picker {
+  display: flex;
+  gap: 10px;
+}
+
+.date-range {
+  color: #000;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  background: transparent;
+}
+
+.log-time {
+  background-color: #0052cc;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 110px;
+  height: 31px;
+}
+
+.group-by-head {
+  margin-top: -5px;
+}
+
+p.p {
+  font-size: 13px;
+}
+
+.group-by {
+  padding: 6px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 110px;
+  height: 31px;
+}
+
+/* Timesheet Table */
+.timesheet-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+.timesheet-table th,
+.timesheet-table td {
+  border: 1px solid #dfe1e6;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.timesheet-table thead {
+  background-color: #f4f5f7;
+}
+
+.date-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.weekday {
+  color: #7a869a;
+}
+
+.issue-cell {
+  text-align: left;
+  font-weight: bold;
+}
+
+.logged-cell {
+  font-weight: bold;
+  text-align: center;
+}
+
+.timesheet-cell {
+  cursor: pointer;
+  background-color: white;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.timesheet-cell:hover {
+  background-color: #e1efff;
+}
+
+.selected {
+  background-color: #b3d4ff !important;
+}
+
+/* Footer */
+tfoot {
+  background-color: #f4f5f7;
+}
+
+.total-label {
+  font-weight: bold;
+}
+
+.total-cell {
+  font-weight: bold;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal Content */
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  margin-bottom: 15px;
+}
+
+/* Input Group */
+.input-group {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 8px;
+  margin-bottom: 15px;
+  background: #f9f9f9;
+}
+
+.modal-input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 5px;
+}
+
+.icon {
+  margin-left: 10px;
+}
+
+/* Input Row */
+.input-row {
+  display: flex;
+  gap: 20px;
+}
+
+/* Buttons */
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.cancel-btn {
+  background: #ccc;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.log-btn {
+  background: #0052cc;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 500px;
+}
+
+.date-header {
+  margin-bottom: 10px;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.date-input {
+  border: none;
+  outline: none;
+  flex: 1;
+}
+
+.calendar-icon {
+  margin-left: 10px;
+}
+
+.predefined-ranges p {
+  cursor: pointer;
+  color: blue;
+}
+
+.custom-days {
+  display: flex;
+  align-items: center;
+}
+
+.custom-days input {
+  width: 40px;
+  margin-right: 5px;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.cancel-btn {
+  background: #ccc;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.apply-btn {
+  background: blue;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
+
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f5f7;
+  margin: 0;
+  padding: 0;
+}
+
+.timesheet-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0747a6;
+  padding: 10px 20px;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* Sidebar */
+.sidebar {
+  width: 60px;
+  background-color: white;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    display: none;
+  }
+}
+
+/* Timesheet Layout */
+.timesheet-container {
+  display: flex;
+  height: 100%;
+}
+
+@media (max-width: 1024px) {
+  .timesheet-container {
+    flex-direction: column;
+  }
+}
+
+/* Header */
+.timesheet-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+  .timesheet-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* Date Picker */
+.date-picker {
+  display: flex;
+  gap: 10px;
+}
+
+@media (max-width: 768px) {
+  .date-picker {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+/* Timesheet Table */
+.timesheet-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+.timesheet-table th,
+.timesheet-table td {
+  border: 1px solid #dfe1e6;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .timesheet-table th,
+  .timesheet-table td {
+    font-size: 12px;
+    padding: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .timesheet-table th,
+  .timesheet-table td {
+    font-size: 10px;
+    padding: 4px;
+  }
+}
+
+/* Buttons */
+.create-btn {
+  background-color: #0052cc;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .create-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.log-time {
+  background-color: #0052cc;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 110px;
+  height: 31px;
+}
+
+/* Footer */
+tfoot {
+  background-color: #f4f5f7;
+}
+
+.total-label {
+  font-weight: bold;
+}
+
+.total-cell {
+  font-weight: bold;
+}
